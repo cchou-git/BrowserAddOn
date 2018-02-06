@@ -1,0 +1,31 @@
+<!DOCTYPE overlay SYSTEM "chrome://speeddial/locale/speeddial.dtd">
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript" src="chrome://speeddial/content/speeddial.js"/>
+<statusbar id="status-bar">
+<statusbarpanel class="statusbarpanel-menu-iconic" id="spdTxtvoicepanel"
+     type="menu-button"
+     tooltiptext="Record the selected word"
+     src="chrome://speeddial/content/images/speeddial.png"
+     onclick="speeddial.onCommand(event, 'dialIt','');"
+     context="spdDonate-item"
+     >
+</statusbarpanel>
+<menupopup id="spdDonate-item">
+	<menuitem tooltiptext="Review" label="Review" class="menuitem-iconic" onclick="speeddial.onCommand(event, 'review', '');"/>
+</menupopup>
+</statusbar>
+<popup id="contentAreaContextMenu">
+	<menuitem id="spdContext-spd" label="Speed dial the selected word"
+              insertbefore="context-back"
+              onclick="speeddial.onCommand(event, 'dialIt','');"/>
+</popup>
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="spd-toolbar-button"
+		label="Record the selected word"
+		tooltiptext="Record the selected word"
+		onclick="speeddial.onCommand(event, 'dialIt','');"
+		image="chrome://speeddial/content/images/speeddial.png"
+		orient="vertical"
+		class="menuitem-iconic"/>
+</toolbarpalette>
+</overlay>

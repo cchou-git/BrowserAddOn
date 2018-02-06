@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://text2voice/locale/text2voice.dtd">
+<prefwindow id="t2vprefs"
+     title="Text 2 Voice Preferences"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+<html:script type="application/javascript" src="chrome://text2voice/content/text2voice.js"/>
+<prefpane id="mainpane" label="Preferences">
+  <preferences>
+    <preference id="t2v-gender" name="extensions.t2v110.gender" type="string"/>
+    <preference id="t2v-lang" name="extensions.t2v110.lang" type="string"/>
+  </preferences>
+  <groupbox>
+    <caption label="Donate" tooltiptext="Donate to help in making this add-on better!!"/>
+    <html:div id="t2vSpeak" name="t2vSpeak" style="text-align:center"><html:img style="cursor:pointer;padding:0 15px 0 15px;" alt="Donate to help in making this add-on better!!" src="chrome://text2voice/content/images/paypal-logo.jpg" onclick="text2voice.onCommand(event, 'donate', '');"></html:img></html:div>
+  </groupbox>
+  <groupbox>
+    <caption label="Select Voice Gender" tooltiptext="Whose voice would you like? A male or a female?"/>
+    <radiogroup preference="t2v-gender" align="left" orient="horizontal">
+  	  <radio id="female" label="Female" value="fm" />
+  	  <radio id="male" label="Male" value="ml" />
+    </radiogroup>
+  </groupbox>
+  <groupbox>
+    <caption label="Select Language" tooltiptext="Which language do you understand better"/>
+    <radiogroup preference="t2v-lang" align="left" orient="vertical">
+  	  <radio id="English" label="English" value="en" />
+  	  <radio id="Hindi" label="Hindi" value="hi" />
+  	  <radio id="Espanol" label="Espanol" value="es" />
+  	  <radio id="Italiano" label="Italiano" value="it" />
+  	  <radio id="Portugues" label="Portugues" value="pt" />
+  	  <radio id="Catala" label="Catala" value="ca" />
+  	  <radio id="Other" label="Other" value="ot" />
+    </radiogroup>
+  </groupbox>
+</prefpane>
+</prefwindow>

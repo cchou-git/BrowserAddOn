@@ -1,0 +1,3 @@
+content speeddial chrome/content/
+overlay chrome://browser/content/browser.xul chrome://speeddial/content/speeddial.xul
+locale speeddial en-US chrome/locale/en-US/
